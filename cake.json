@@ -1,17 +1,3 @@
-# Adonis Cake Api Application
-
-## Setup
-- Copy paste Commands
-- Enter the folder start/app.js and paste the next command:
-```
-const commands = [
-  'App/Commands/CakeCrud',
-  'App/Commands/CakeTest',
-  'App/Commands/CakeDocumentation'
-];
-```
-- Create cake.js in paste root in the following structure example:
-````
 [
   {
     "name": "Users",
@@ -41,6 +27,7 @@ const commands = [
       "created_by": {
         "column": { "type": "uuid" },
         "references": "uuid",
+        "primaryKey": "users_uuid",
         "inTable": "users",
         "notNullable": true,
         "onDelete": "CASCADE",
@@ -73,5 +60,3 @@ const commands = [
     }
   }
 ]
-
-```

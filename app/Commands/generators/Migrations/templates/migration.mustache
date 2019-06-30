@@ -1,0 +1,20 @@
+'use strict'
+
+const Schema = use('Schema')
+
+class {{name}}TableSchema extends Schema {
+
+  up () {
+    this.create('{{table}}', (table) => {
+      {{#columns}}
+      {{{ . }}}
+      {{/columns}}
+    })
+  }
+
+  down () {
+    this.drop('{{table}}')
+  }
+}
+
+module.exports = {{name}}TableSchema

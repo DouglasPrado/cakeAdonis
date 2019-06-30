@@ -1,0 +1,13 @@
+'use strict'
+
+const Model = use('Model')
+
+class {{table}} extends Model {
+  static boot() {
+    super.boot();
+    // Create uuid before create the {{table}}
+    this.addHook('beforeCreate', 'UuidHook.method');
+  }
+{{#columns}}
+  {{{ . }}}
+{{/columns}}

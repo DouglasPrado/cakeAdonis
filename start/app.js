@@ -53,6 +53,10 @@ const aliases = {}
 | Here you store ace commands for your package
 |
 */
-const commands = []
+const commands = [
+  'App/Commands/CakeCrud',
+  'App/Commands/CakeTest',
+  'App/Commands/CakeDocumentation'
+];
 
 module.exports = { providers, aceProviders, aliases, commands }
